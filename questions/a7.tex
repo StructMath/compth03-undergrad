@@ -1,0 +1,19 @@
+\begin{enumerate}
+  \item ابتدا برای نشان دادن $\mathbf{Fin} \in \Sigma_2$ توجّه کنید که برای هر $x$ داریم
+  $$ x \in \mathbf{Fin} \iff \exists N \forall y \forall s (N < y \implies \neg H(x, y, s)) $$
+  که در آن $H(x, y, s)$ به معنی توقف برنامه با کد $x$ بر روی ورودی $y$ در $s$ گام و تصمیم‌پذیر است.
+
+  حال فرض کنید $A \in \Sigma_2$. پس محمول تصمیم‌پذیری مانند $R(x, y, z)$ وجود دارد که برای هر $x$ داریم
+  $$ x \in A \iff \exists y \forall z (R(x, y, z)) $$
+  به کمک قضیهٔ \lr{s-m-n} تابع تام محاسبه‌پذیر $f$ را به قسمی تعریف کنید که
+  $$\varphi_{f(x)}(u) = \begin{cases}
+    0 & \forall y \le u (\exists z (\neg R(x, y, z))) \\
+    \uparrow & \text{otw.}
+  \end{cases}$$
+  حال اگر داشته باشیم $x \in A$، آن‌گاه وجود دارد $y$ که برای هر $z$ داریم $R(x, y, z)$. در نتیجه برای هر $y < u$ خواهیم داشت $\varphi_{f(x)}(u)\uparrow$. پس $f(x) \in \mathbf{Fin}$. از سوی دیگر، اگر داشته باشیم $x \not \in A$، $\varphi_{f(x)}$ روی هر $\mathbb{N} \ni u$ متوقّف می‌شود. پس $f(x) \not \in \mathbf{Fin}$
+
+  \item ابتدا برای $\mathbf{Tot} \in \Pi_2$ توجّه کنید که برای هر $x$ داریم
+  $$ x \in \mathbf{Tot} \iff \forall y \exists s (H(x, y, s)) $$
+  که در آن $H(x, y, s)$ مشابه با بالا تعریف شده است. برای این که نشان دهیم $\mathbf{Tot}$ برای $\Pi_2$ $m$-کامل است، می‌توان دید به ازای همان $f$ و $A$ تعریف شده در بالا داریم
+  $x \in \bar{A} \iff f(x) \in \mathbf{Tot}$.
+\end{enumerate}

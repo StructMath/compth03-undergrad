@@ -1,0 +1,21 @@
+کافی است نشان دهیم $B_1 \times B_2 \leq_m B_2$. تابع زیر را در نظر بگیرید:
+
+$$
+f(x) = \begin{cases}
+    \text{right}(x) & \text{left}(x) \in B_1 \\
+    b & \text{otw.}
+\end{cases}
+$$
+این تابع محاسبه‌پذیر تام است زیرا $B_1$ متناهی و در نتیجه تصمیم‌پذیر است.
+و در آن $b \notin B_2$ زیرا می‌دانیم که $B_2$ برابر تمام اعداد طبیعی نیست. اکنون داریم:
+$$
+x\in B_1 \times B_2 \implies f(x) = \text{right}(x) \in B_2
+$$
+
+همچنین اگر $x\notin B_1 \times B_2$ به این خاطر که $\text{left}(x) \notin B_1$
+در این صورت داریم
+$f(x)=b\notin B_2$.
+ولی اگر به این خاطر باشد که $\text{right}(x) \notin B_2$ در این صورت چه $f(x)=b$ و چه $f(x) = \text{right}(x)$ در هر دو صورت $f(x)\notin B_2$، پس در نهایت داریم:
+$$
+x \in B_1 \times B_2 \iff f(x) \in B_2
+$$

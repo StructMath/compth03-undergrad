@@ -1,0 +1,27 @@
+اولا نشان می‌دهیم به ازای هر $x$ دلخواه وجود دارد تابع محاسبه‌پذیری مانند $k(x)$
+به طوری که $W_{k(x)} = A \cup W_x$. تابع زیر را در نظر بگیرید:
+
+$$
+f(x,y) = \begin{cases}
+    1 & g(y)\downarrow \vee \phi_x(y) \downarrow \\ 
+    \uparrow & \text{otw.}
+\end{cases}
+$$
+
+که در آن $g$ تابعی است که $A=Dom(g)$.
+اکنون طبق قضیه‌ی \lr{s-m-n} وجود دارد یک تابع محاسبه‌پذیر مانند $k$ به طوری که:
+$$\phi_{k(x)}(y) = f(x,y)$$
+
+در نتیجه داریم $W_{k(x)} = A \cup W_x$. اکنون چون $C$ نیز \lr{r.e.} است، پس یک عدد مانند $z$ وجود دارد که $C=W_z$ در نتیجه طبق چیزی که اثبات کردیم $C\cup A$ نیز \lr{r.e.} است.
+
+اکنون داریم:
+
+$$
+W_x \subseteq \overline{C \cup A} \implies W_{k(x)} = A \cup W_x \subseteq \bar{C}
+\implies f(k(x)) \in \bar{C} - (A\cup W_x)
+$$
+$$
+\implies f(k(x)) \in (\bar{C} - A) - W_x \implies f(k(x)) \in \bar{C}\cap \bar{A} - W_x
+$$
+
+در نتیجه $(C\cup A)'$ مولّد است و تابع مولّد آن نیز $g = f \circ k$ است.
